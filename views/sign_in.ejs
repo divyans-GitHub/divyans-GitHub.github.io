@@ -1,0 +1,42 @@
+<div class="card">
+    <p class="text-style">Welcome </p>
+    <p class="text-style">To Sign In Page</p>
+    <div class="social-auth">
+      <a href="/users/auth/google"> SignIn/SignUp with Google </a>
+    </div>
+    <hr size="1" width="25%" color="blue" style="display: inline-block;">  
+    <div class="form">
+        <form action="/users/create-session" method="POST">
+            <label for="#username">Email</label>
+             <input type="email" name="email" id="username" placeholder="enter email id" required>
+               <br> <br>
+            <label for="#pass">Password</label>
+            <input type="password" name="password" id="pass" placeholder="enter your Password" required>
+              <br> <br>
+            <a href="" id="forgetPass"> forget Password?</a>
+            <button type="submit">Login</button>
+            
+        </form>
+  </div>
+</div>
+<br>
+
+<div id="forgetPassForm">
+  <form action="/users/reset" method="post">
+    <input type="email" name="email"  placeholder="enter registered email id" required>
+    <button type="submit"> submit </button>
+  </form>
+</div>
+
+<script>
+
+var hiddenBox = $( "#forgetPassForm" );
+  
+
+  $( "#forgetPass" ).on( "click", function( event ) {
+    event.preventDefault();
+    hiddenBox.show();
+    $('.card').hide();
+  });
+ 
+</script>

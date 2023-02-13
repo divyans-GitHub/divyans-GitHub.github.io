@@ -1,0 +1,28 @@
+<div class="card">
+    <p class="text-style">Welcome </p>
+    <p class="text-style">To Sign Up Page</p>
+    <div class="social-auth">
+      <a href="/users/auth/google"> SignIn/SignUp with Google </a>
+    </div>
+     <hr size="1" width="25%" color="blue" style="display: inline-block;">  
+    <div class="form">
+        <form action="/users/create" method="POST">
+            <label for="#Name">Name</label>
+             <input type="text" name="name" id="Name" placeholder="enter your name" required>
+             <br> <br>
+            <label for="#username">Email</label>
+             <input type="email" name="email" id="username" placeholder="enter email id" required>
+              <br> <br>
+            <label for="#pass-1">Password</label>
+            <input type="password" name="password" id="pass-1" placeholder="enter your Password" required>
+             <br> <br>
+             <label for="#pass-2">Confirm Password</label>
+             <input type="password" name="confirm_password" id="pass-2" placeholder="confirm your Password" required>
+             <br> <br>
+            
+            <button type="submit">Sign Up</button>
+            <br> <br> <br>
+        </form>
+  </div>
+</div>
+<br>

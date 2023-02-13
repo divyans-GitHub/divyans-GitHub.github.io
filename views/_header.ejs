@@ -1,0 +1,38 @@
+<header>
+    <div class="header-container">
+
+      <div class="text-style">CODEIAL</div>
+      <div>
+                <ul style="list-style: none; float: right;">
+                    
+                    <% if(locals.user){ %>
+                    <li>
+                        <a href="/"> Home </a> 
+                       &ensp; &ensp;
+                        <a href="/users/profile"> <%= user.name %> </a> 
+                      &ensp; &ensp;
+                        <a href="/users/sign-out"> Sign Out </a>
+                    </li>
+
+                    <% } else { %>
+                    
+                    <li>
+                        <a href="/"> Home </a> 
+                        &ensp; &ensp;
+                       
+                        <a href="/users/sign-up">
+                            <i class="fas fa-user-plus"></i>Sign Up
+                        </a>
+                     &ensp; &ensp;
+                      
+                    <a href="/users/sign-in">
+                        <i class="fas fa-user"></i>Sign In
+                    </a>
+               </li>
+                    
+
+                    <% } %>
+                </ul>
+      </div> 
+    </div>
+</header>
